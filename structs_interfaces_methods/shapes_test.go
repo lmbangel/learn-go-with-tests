@@ -22,7 +22,7 @@ func CheckArea(t testing.TB, s Shape, want float64) {
 	got := s.Area()
 
 	if got != want {
-		t.Errorf("got %.2f want %.2f", got, want)
+		t.Errorf("%T got %.2f want %.2f", s, got, want)
 	}
 }
 func TestArea(t *testing.T) {
