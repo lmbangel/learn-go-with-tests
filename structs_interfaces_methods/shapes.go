@@ -11,19 +11,28 @@ type Rectangle struct {
 	Height float64
 }
 
-func (s *Rectangle) Area() float64 {
-	return s.Width * s.Height
+func (r *Rectangle) Area() float64 {
+	return r.Width * r.Height
 }
 
 type Circle struct {
 	Radius float64
 }
 
-func (s *Circle) Area() float64 {
-	return (s.Radius * s.Radius) * math.Pi
+func (c *Circle) Area() float64 {
+	return (c.Radius * c.Radius) * math.Pi
 }
 
-func Perimeter(s Rectangle) float64 {
-	perimeter := 2 * (s.Width + s.Height)
+type Triangle struct {
+	Base   float64
+	Height float64
+}
+
+func (t *Triangle) Area() float64 {
+	return (t.Base * t.Height) / 2
+}
+
+func Perimeter(r Rectangle) float64 {
+	perimeter := 2 * (r.Width + r.Height)
 	return perimeter
 }

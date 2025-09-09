@@ -31,9 +31,16 @@ func TestArea(t *testing.T) {
 		want := 100.0
 		CheckArea(t, rectangle, want)
 	})
+
 	t.Run("Test the Area of a Circle", func(t *testing.T) {
 		circle := &Circle{5.0}
 		want := (circle.Radius * circle.Radius) * math.Pi
 		CheckArea(t, circle, want)
+	})
+
+	t.Run("Test the Area of a Triange", func(t *testing.T) {
+		triangle := &Triangle{10.0, 5}
+		want := (triangle.Base * triangle.Height) / 2
+		CheckArea(t, triangle, want)
 	})
 }
